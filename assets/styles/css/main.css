@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&family=Major+Mono+Display&family=Space+Mono:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General Styles */
+* {
+    font-family: "B612 Mono", monospace;
+}
+
+.light body {
+    background-color: #e5e7eb;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#title {
+    font-family: "Major Mono Display", monospace;
+}
+
+.container {
+    background-color: white;
+}
+
+.dark body {
+    background-color: #16181c;
+    color: #ebf4f1;
+}
+
+.dark .container {
+    background-color: #26292f;
+}
+
+.text-primary {
+    @apply text-green-500;
+}
+
+#explore-btn-bg {
+    transition: top 0.3s cubic-bezier(0.5, 0, 0, 1);
+}
+
+#explore-btn:hover #explore-btn-bg {
+    @apply top-0
+}
+
+.intro-loader {
+    /*transition: height 0.3s cubic-bezier(0.5, 0, 0, 1);*/
+    animation: intro-slide-in 0.6s cubic-bezier(0.5, 0, 0, 1) both;
+}
+
+.intro-loader-reversed {
+    animation: intro-slide-in 0.6s cubic-bezier(0.5, 0, 0, 1) both reverse;
+}
+
+/* Selections */
+.dark .text-primary::selection {
+    @apply bg-[#e5e7eb];
+}
+
+.light .text-primary::selection {
+    @apply bg-[#26292f];
+}
+
+::selection {
+    @apply bg-green-500;
+}
+
+/* Animation Classes */
+.slide-in {
+    animation: slide-in 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 100ms;
+}
+
+.title-animation {
+    animation: puff-in-bottom 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+/* Animations */
+@keyframes slide-in {
+    0% {
+        transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        transform-origin: 100% 50%;
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scaleY(1) scaleX(1);
+        transform-origin: 50% 50%;
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes puff-in-bottom {
+    0% {
+        transform: scale(2);
+        transform-origin: 50% 100%;
+        filter: blur(4px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: 50% 100%;
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes intro-slide-in {
+    0% {
+        height: 0vh;
+    }
+    100% {
+        height: 100vh;
+    }
+}

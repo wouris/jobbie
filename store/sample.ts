@@ -1,17 +1,17 @@
 import { defineStore } from 'pinia';
 
-export const useSampleStore = defineStore('sampleStore', {
+export const useLoaderStore = defineStore('loaderStore', {
   state: (): {
-    sampleData: string,
+    showLoader: boolean,
   } => ({
-    sampleData: '🍍 Hello from sample store.',
+    showLoader: true,
   }),
   getters: {
-    getSampleData: state => state.sampleData,
+    shouldShowLoader: state => state.showLoader,
   },
   actions: {
-    setSampleData (testString: string) {
-      this.sampleData = testString;
+    setShowLoader (value: boolean) {
+      this.showLoader = value;
     },
   },
 });

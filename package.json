@@ -35,7 +35,9 @@
     "vitest": "^0.32.2"
   },
   "dependencies": {
+    "@nuxtjs/color-mode": "^3.3.0",
     "@pinia/nuxt": "^0.4.11",
+    "nuxt-icon": "^0.4.1",
     "pinia": "^2.1.4"
   }
 }

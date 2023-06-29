@@ -1,28 +1,39 @@
+<script setup>
+const colorMode = useColorMode()
+</script>
+
 <template>
-  <div class="flex flex-col gap-3 p-10">
-    <h1 class="text-3xl font-bold">
-      👋 Hello Nuxt 3 starter
-    </h1>
-    <p>
-      {{Store.sampleData}}
-    </p>
-    <button
-      @click="changeSampleStoreData('✅ Hello from changed store!')"
-      class="px-3 py-2 w-fit bg-gray-800 text-white"
-    >
-      Change state
-    </button>
+  <div class="grid place-items-center h-screen">
+    <div class="flex flex-col gap-2 items-center">
+      <h1 id="title" class="text-6xl text-primary title-animation">JObbIE.</h1>
+      <h3 class="text-3xl">Turn your hobby into a job!</h3>
+      <a id="explore-btn"
+         class="border-green-500 rounded-sm border-2 p-2 py flex items-center overflow-hidden relative cursor-pointer"
+         @click="redirect">
+        <div id="explore-btn-bg" class="absolute bg-green-500 h-full w-full right-0 top-10"></div>
+        <span class="text-center slide-in mr-1">Explore</span>
+        <Icon class="-rotate-90" name="line-md:arrow-left"/>
+      </a>
+    </div>
   </div>
+
+  <TransitionSection v-if="showLoader"/>
 </template>
 
-
-<script setup>
-  import { useSampleStore } from '~/store/sample';
-  
-  const Store = useSampleStore();
-
-  function changeSampleStoreData(testString) {
-    Store.setSampleData(testString);
+<script>
+export default {
+  data() {
+    return {
+      "showLoader": false,
+    }
+  },
+  methods: {
+    async redirect() {
+      this.showLoader = true
+      setTimeout(() => {
+        navigateTo('/browse')
+      }, 600)
+    }
   }
-
+}
 </script>

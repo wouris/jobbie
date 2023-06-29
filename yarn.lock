@@ -2175,6 +2175,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iconify/types@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@iconify/types@npm:2.0.0"
+  checksum: 029f58542c160e9d4a746869cf2e475b603424d3adf3994c5cc8d0406c47e6e04a3b898b2707840c1c5b9bd5563a1660a34b110d89fce43923baca5222f4e597
+  languageName: node
+  linkType: hard
+
+"@iconify/vue@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "@iconify/vue@npm:4.1.1"
+  dependencies:
+    "@iconify/types": ^2.0.0
+  peerDependencies:
+    vue: ">=3"
+  checksum: 505fd96e69d6b805a4d3a5ee6f1a51e0cedb9ce9eb67be85be7118dafbb6bfcaf8c6ea6b261cdbf4efefb65687fd7572a82bd5ddab16383c5ecf13998dff9ca3
+  languageName: node
+  linkType: hard
+
 "@ioredis/commands@npm:^1.1.1":
   version: 1.2.0
   resolution: "@ioredis/commands@npm:1.2.0"
@@ -2641,6 +2659,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nuxt/kit@npm:^3.5.3":
+  version: 3.6.1
+  resolution: "@nuxt/kit@npm:3.6.1"
+  dependencies:
+    "@nuxt/schema": 3.6.1
+    c12: ^1.4.2
+    consola: ^3.1.0
+    defu: ^6.1.2
+    globby: ^13.2.0
+    hash-sum: ^2.0.0
+    ignore: ^5.2.4
+    jiti: ^1.18.2
+    knitwork: ^1.0.0
+    mlly: ^1.4.0
+    pathe: ^1.1.1
+    pkg-types: ^1.0.3
+    scule: ^1.0.0
+    semver: ^7.5.3
+    unctx: ^2.3.1
+    unimport: ^3.0.10
+    untyped: ^1.3.2
+  checksum: fa46717632dda79eb135b1be791442fb4d80109d9d1d59c453d5c29987f4977bb62d8c98ceddd587cde0bdbb62a1d2f37a6ec5dd1cc077e98589f451019f2c7c
+  languageName: node
+  linkType: hard
+
 "@nuxt/schema@npm:3.6.0, @nuxt/schema@npm:^3.6.0":
   version: 3.6.0
   resolution: "@nuxt/schema@npm:3.6.0"
@@ -2655,6 +2698,23 @@ __metadata:
     unimport: ^3.0.8
     untyped: ^1.3.2
   checksum: a7ce4749b3710a72c55f776f7f4c29465dbb9aa07a31045547359b953cb79ab206156e7ba32d1d8e6f70d67832939a65038b72a48dd05686e209897d01f80c8f
+  languageName: node
+  linkType: hard
+
+"@nuxt/schema@npm:3.6.1":
+  version: 3.6.1
+  resolution: "@nuxt/schema@npm:3.6.1"
+  dependencies:
+    defu: ^6.1.2
+    hookable: ^5.5.3
+    pathe: ^1.1.1
+    pkg-types: ^1.0.3
+    postcss-import-resolver: ^2.0.0
+    std-env: ^3.3.3
+    ufo: ^1.1.2
+    unimport: ^3.0.10
+    untyped: ^1.3.2
+  checksum: 0d5de95704ed0f58b0c2d0d39770b5e1cb71589e2f3f803aa2104a849c2f6e0e9b00150c28155b6da133cd6ffd7e8ba6edf889487da4047b59d173288d5e1a62
   languageName: node
   linkType: hard
 
@@ -2737,6 +2797,17 @@ __metadata:
   peerDependencies:
     vue: ^3.3.4
   checksum: 89ca2dbd76e25e8c107204e4ae2a089847e0ad65d87e8b845adc27133e12bfb880699df67a22d05af437261a52026468c85a8a0b1f83e988654f0cb37aac5610
+  languageName: node
+  linkType: hard
+
+"@nuxtjs/color-mode@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "@nuxtjs/color-mode@npm:3.3.0"
+  dependencies:
+    "@nuxt/kit": ^3.5.3
+    lodash.template: ^4.5.0
+    pathe: ^1.1.1
+  checksum: 5b90e5bc92bcb4ba57627518a881326b4b1b6280c4fdaa5ed309861475bb7dd9c4e04dc42450ca0c7d42e394019a14d003b935597b9d927f2b06a8ebdfbb1454
   languageName: node
   linkType: hard
 
@@ -12467,6 +12538,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash._reinterpolate@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "lodash._reinterpolate@npm:3.0.0"
+  checksum: 06d2d5f33169604fa5e9f27b6067ed9fb85d51a84202a656901e5ffb63b426781a601508466f039c720af111b0c685d12f1a5c14ff8df5d5f27e491e562784b2
+  languageName: node
+  linkType: hard
+
 "lodash.debounce@npm:^4.0.8":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
@@ -12527,6 +12605,25 @@ __metadata:
   version: 4.4.0
   resolution: "lodash.pick@npm:4.4.0"
   checksum: 2c36cab7da6b999a20bd3373b40e31a3ef81fa264f34a6979c852c5bc8ac039379686b27380f0cb8e3781610844fafec6949c6fbbebc059c98f8fa8570e3675f
+  languageName: node
+  linkType: hard
+
+"lodash.template@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "lodash.template@npm:4.5.0"
+  dependencies:
+    lodash._reinterpolate: ^3.0.0
+    lodash.templatesettings: ^4.0.0
+  checksum: ca64e5f07b6646c9d3dbc0fe3aaa995cb227c4918abd1cef7a9024cd9c924f2fa389a0ec4296aa6634667e029bc81d4bbdb8efbfde11df76d66085e6c529b450
+  languageName: node
+  linkType: hard
+
+"lodash.templatesettings@npm:^4.0.0":
+  version: 4.2.0
+  resolution: "lodash.templatesettings@npm:4.2.0"
+  dependencies:
+    lodash._reinterpolate: ^3.0.0
+  checksum: 863e025478b092997e11a04e9d9e735875eeff1ffcd6c61742aa8272e3c2cddc89ce795eb9726c4e74cef5991f722897ff37df7738a125895f23fc7d12a7bb59
   languageName: node
   linkType: hard
 
@@ -13898,6 +13995,16 @@ __metadata:
   bin:
     nuxi: bin/nuxi.mjs
   checksum: 6169c9dd838ca0a062aa2292a6030cb9d8e5011f3e2e6de354eeca65527fbc1888629b81a26f8b70050a736dbd23cf32414b4602527364b7b3119663f8ae53aa
+  languageName: node
+  linkType: hard
+
+"nuxt-icon@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "nuxt-icon@npm:0.4.1"
+  dependencies:
+    "@iconify/vue": ^4.1.1
+    "@nuxt/kit": ^3.5.0
+  checksum: c9cd19750174df890ebec696e22d69dc570ab18afce0e08191ebae5b6d8bfc3a61d1b21e87dcf3b9eaf33d149d61286446d09ce9a28e56d8990e355309633c15
   languageName: node
   linkType: hard
 
@@ -16514,6 +16621,7 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@nuxt/devtools": ^0.6.3
+    "@nuxtjs/color-mode": ^3.3.0
     "@pinia/nuxt": ^0.4.11
     "@storybook/addon-a11y": ^6.5.16
     "@storybook/addon-essentials": ^6.5.16
@@ -16523,6 +16631,7 @@ __metadata:
     "@vitest/coverage-c8": ^0.32.2
     "@vitest/ui": ^0.32.2
     nuxt: ^3.6.0
+    nuxt-icon: ^0.4.1
     pinia: ^2.1.4
     postcss: ^8.4.24
     sass: ^1.63.6
@@ -18612,6 +18721,25 @@ __metadata:
     trough: ^1.0.0
     vfile: ^4.0.0
   checksum: 0cac4ae119893fbd49d309b4db48595e4d4e9f0a2dc1dde4d0074059f9a46012a2905f37c1346715e583f30c970bc8078db8462675411d39ff5036ae18b4fb8a
+  languageName: node
+  linkType: hard
+
+"unimport@npm:^3.0.10":
+  version: 3.0.11
+  resolution: "unimport@npm:3.0.11"
+  dependencies:
+    "@rollup/pluginutils": ^5.0.2
+    escape-string-regexp: ^5.0.0
+    fast-glob: ^3.2.12
+    local-pkg: ^0.4.3
+    magic-string: ^0.30.0
+    mlly: ^1.4.0
+    pathe: ^1.1.1
+    pkg-types: ^1.0.3
+    scule: ^1.0.0
+    strip-literal: ^1.0.1
+    unplugin: ^1.3.1
+  checksum: fbfdbc90dead3d4bb3974fd2cb00db2b01af6641936f061845c5e15c3c538e2b7a23267a67af30fdd8a094101840b281940e9235ca44716428a25869cce1f7a7
   languageName: node
   linkType: hard
 
