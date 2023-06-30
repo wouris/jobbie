@@ -1,5 +1,6 @@
 <script setup>
 import {useHeaderStore} from "~/store/headerStore";
+import SearchReversed from "~/components/Icon/SearchReversed.vue";
 
 const Store = useHeaderStore()
 </script>
@@ -7,8 +8,19 @@ const Store = useHeaderStore()
 <template>
   <header class="h-20 flex items-center justify-around w-full top-0 p-2">
     <div class="title text-6xl text-left relative">
-      <!--      <p v-if="Store.showIcons" class="w-full">J</p>-->
       <p class="overflow-hidden w-full">Jobbie</p>
+    </div>
+    <div class="flex items-center">
+      <Icon v-if="Store.showIcons" class="text-3xl" name="line-md:search"/>
+      <div :class="!Store.showIcons ? 'hidden' : ''">
+        <SearchReversed/>
+      </div>
+      <button v-if="$colorMode.value === 'light'" @click="$colorMode.preference = 'dark'">
+        <Icon class="text-3xl" name="line-md:moon-alt-to-sunny-outline-loop-transition"/>
+      </button>
+      <button v-else @click="$colorMode.preference = 'light'">
+        <Icon class="text-3xl" name="line-md:sunny-outline-to-moon-alt-loop-transition"/>
+      </button>
     </div>
   </header>
 </template>
@@ -19,18 +31,30 @@ import {useHeaderStore} from "~/store/headerStore";
 const Store = useHeaderStore()
 if (process.client) {
 
-  let timeout = null
+  let timeout = null;
 
-  window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 0)
-    if (!timeout) {
-      timeout = setTimeout(() => {
-        Store.showIcons = window.scrollY > 0
-        timeout = null
-      }, 500)
-    }
-  })
+  window.addEventListener(
+      "scroll",
+      () => {
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+
+        if (timeout) {
+          clearTimeout(timeout);
+        }
+
+        if (window.scrollY === 0) {
+          timeout = setTimeout(() => {
+            console.log("Delayed execution");
+            Store.setShowIcons(false);
+          }, 200);
+        } else {
+          Store.setShowIcons(true);
+        }
+      }
+  );
+
+
 }
 </script>
 
@@ -52,23 +76,12 @@ header.sticky {
   transition-delay: 50ms;
 }
 
-header.sticky .title p {
-  transition-property: width, transform;
-  transition-duration: 0.5s;
-  transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
-  transition-delay: 0ms, 500ms;
-}
-
 header .title p {
-  transition-property: width, transform;
-  transition-duration: 0.5s;
-  transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
-  transition-delay: 500ms, 0ms;
+  transition: width 0.5s cubic-bezier(0.5, 0, 0, 1);
 }
 
 header.sticky .title p {
   @apply text-5xl w-[18%];
-  transform: translateX(85px);
 }
 
 .light header.sticky {

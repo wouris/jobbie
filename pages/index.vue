@@ -1,5 +1,7 @@
 <script setup>
-const colorMode = useColorMode()
+definePageMeta({
+  layout: "intro",
+});
 </script>
 
 <template>
@@ -11,7 +13,7 @@ const colorMode = useColorMode()
          class="border-green-500 rounded-sm border-2 p-2 py flex items-center overflow-hidden relative cursor-pointer"
          @click="redirect">
         <div id="explore-btn-bg" class="absolute bg-green-500 h-full w-full right-0 top-10"></div>
-        <span class="text-center slide-in mr-1">Explore</span>
+        <span class="text-center slide-in-blurred-left mr-1">Explore</span>
         <Icon class="-rotate-90" name="line-md:arrow-left"/>
       </a>
     </div>
@@ -41,10 +43,10 @@ export default {
 <style scoped>
 /* General Styles */
 #explore-btn-bg {
-    transition: top 0.3s cubic-bezier(0.5, 0, 0, 1);
+  transition: top 0.3s cubic-bezier(0.5, 0, 0, 1);
 }
 
 #explore-btn:hover #explore-btn-bg {
-    @apply top-0
+  @apply top-0
 }
 </style>

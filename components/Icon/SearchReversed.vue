@@ -1,0 +1,14 @@
+<template>
+  <svg height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2">
+      <path d="M10.5 13.5L3 21" stroke-dasharray="16" stroke-dashoffset="0">
+        <animate attributeName="stroke-dashoffset" begin="0.4s" dur="0.2s" fill="freeze" values="0;16"/>
+      </path>
+      <path
+          d="M10.7574 13.2426C8.41421 10.8995 8.41421 7.10051 10.7574 4.75736C13.1005 2.41421 16.8995 2.41421 19.2426 4.75736C21.5858 7.10051 21.5858 10.8995 19.2426 13.2426C16.8995 15.5858 13.1005 15.5858 10.7574 13.2426Z"
+          stroke-dasharray="40" stroke-dashoffset="0">
+        <animate attributeName="stroke-dashoffset" dur="0.4s" fill="freeze" values="0;40"/>
+      </path>
+    </g>
+  </svg>
+</template>
