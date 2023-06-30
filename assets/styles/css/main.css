@@ -35,14 +35,6 @@
     @apply text-green-500;
 }
 
-#explore-btn-bg {
-    transition: top 0.3s cubic-bezier(0.5, 0, 0, 1);
-}
-
-#explore-btn:hover #explore-btn-bg {
-    @apply top-0
-}
-
 .intro-loader {
     /*transition: height 0.3s cubic-bezier(0.5, 0, 0, 1);*/
     animation: intro-slide-in 0.6s cubic-bezier(0.5, 0, 0, 1) both;

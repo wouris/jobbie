@@ -37,3 +37,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+/* General Styles */
+#explore-btn-bg {
+    transition: top 0.3s cubic-bezier(0.5, 0, 0, 1);
+}
+
+#explore-btn:hover #explore-btn-bg {
+    @apply top-0
+}
+</style>

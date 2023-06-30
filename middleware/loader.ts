@@ -1,4 +1,4 @@
-import { useLoaderStore } from '~/store/sample';
+import { useLoaderStore } from '~/store/loaderStore';
 export default defineNuxtRouteMiddleware((to, from) => {
     const store = useLoaderStore()
 

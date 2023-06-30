@@ -1,5 +1,5 @@
 <script setup>
-import { useLoaderStore } from '~/store/sample';
+import { useLoaderStore } from '~/store/loaderStore';
 
 const store = useLoaderStore()
 
@@ -31,7 +31,57 @@ export default {
           "title": "Junior Java Engineer",
           "company": "Swiss Re",
           "location": "Bratislava, Slovensko"
-        }
+        },
+        {
+          "title": "C# developer",
+          "company": "Siemens Slovensko",
+          "location": "Košice, Slovensko"
+        },
+        {
+          "title": "Junior Java Engineer",
+          "company": "Swiss Re",
+          "location": "Bratislava, Slovensko"
+        },
+        {
+          "title": "C# developer",
+          "company": "Siemens Slovensko",
+          "location": "Košice, Slovensko"
+        },
+        {
+          "title": "Junior Java Engineer",
+          "company": "Swiss Re",
+          "location": "Bratislava, Slovensko"
+        },
+        {
+          "title": "C# developer",
+          "company": "Siemens Slovensko",
+          "location": "Košice, Slovensko"
+        },
+        {
+          "title": "Junior Java Engineer",
+          "company": "Swiss Re",
+          "location": "Bratislava, Slovensko"
+        },
+        {
+          "title": "C# developer",
+          "company": "Siemens Slovensko",
+          "location": "Košice, Slovensko"
+        },
+        {
+          "title": "Junior Java Engineer",
+          "company": "Swiss Re",
+          "location": "Bratislava, Slovensko"
+        },
+        {
+          "title": "C# developer",
+          "company": "Siemens Slovensko",
+          "location": "Košice, Slovensko"
+        },
+        {
+          "title": "Junior Java Engineer",
+          "company": "Swiss Re",
+          "location": "Bratislava, Slovensko"
+        },
       ]
     }
   }
