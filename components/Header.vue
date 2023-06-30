@@ -12,9 +12,7 @@ const Store = useHeaderStore()
     </div>
     <div class="flex items-center">
       <Icon v-if="Store.showIcons" class="text-3xl" name="line-md:search"/>
-      <div :class="!Store.showIcons ? 'hidden' : ''">
-        <SearchReversed/>
-      </div>
+      <SearchReversed v-if="!Store.showIcons && !Store.isInitial"/>
       <button v-if="$colorMode.value === 'light'" @click="$colorMode.preference = 'dark'">
         <Icon class="text-3xl" name="line-md:moon-alt-to-sunny-outline-loop-transition"/>
       </button>
