@@ -10,9 +10,9 @@ const Store = useHeaderStore()
     <div class="title text-7xl relative flex items-center gap-3">
       <p class="overflow-hidden w-[15%] md:w-full">Jobbie</p>
     </div>
-    <div @click="openOverlay">
+    <div class="grid place-items-center w-1/3" @click="openOverlay">
       <button id="search"
-              class="flex justify-between items-center rounded-full px-5 py-2 bg-white/30 text-gray-400">
+              class="flex justify-between items-center rounded-full w-1/2 px-5 py-2 bg-white/30 text-gray-400">
         <div class="flex items-center">
           <!--                    <Icon class="text-3xl" name="line-md:search"/>-->
           <p class="text-xl">Search</p>
@@ -25,9 +25,13 @@ const Store = useHeaderStore()
       </button>
     </div>
     <div v-if="showSearch" id="search-overlay"
-         class="background-inversed-transparent overflow-hidden fixed left-0 top-0 w-full backdrop-blur intro-loader"
+         class="grid place-items-center background-inversed-transparent overflow-hidden fixed left-0 top-0 w-full backdrop-blur intro-loader"
          @click="closeOverlay">
-      <p>cau</p>
+      <div class="flex gap-2 items-center rounded-xl container py-3 px-5 w-1/3">
+        <Icon class="text-4xl rotate-90 text-gray-400" name="material-symbols:search"/>
+        <input class="text-4xl bg-transparent text-gray-400"
+               placeholder="Search..." type="text">
+      </div>
     </div>
     <div id="right-items" class="flex items-center overflow-hidden">
       <a>
