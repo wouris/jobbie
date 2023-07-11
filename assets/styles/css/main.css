@@ -14,6 +14,22 @@ body, .container {
     @apply transition-colors duration-500 ease-in-out;
 }
 
+.dark .background-inversed {
+    background-color: #e5e7eb;
+}
+
+.light .background-inversed {
+    background-color: #16181c;
+}
+
+.dark .background-inversed-transparent {
+    background-color: rgba(229, 231, 235, 0.2);
+}
+
+.light .background-inversed-transparent {
+    background-color: rgba(22, 24, 28, 0.2);
+}
+
 .light body {
     background-color: #e5e7eb;
     color: rgba(0, 0, 0, 0.8);
@@ -36,17 +52,20 @@ body, .container {
     background-color: #26292f;
 }
 
+.dark .search {
+    @apply bg-white/10
+}
+
+.dark .search:focus {
+    @apply bg-white/20
+}
+
 .text-primary {
     @apply text-green-500;
 }
 
-.intro-loader {
-    /*transition: height 0.3s cubic-bezier(0.5, 0, 0, 1);*/
-    animation: intro-slide-in 0.6s cubic-bezier(0.5, 0, 0, 1) both;
-}
-
-.intro-loader-reversed {
-    animation: intro-slide-in 0.6s cubic-bezier(0.5, 0, 0, 1) both reverse;
+.dark .text-dark {
+    @apply text-[#16181c]
 }
 
 /* Selections */
@@ -63,6 +82,14 @@ body, .container {
 }
 
 /* Animation Classes */
+.intro-loader {
+    animation: intro-slide-in 0.6s cubic-bezier(0.5, 0, 0, 1) both;
+}
+
+.intro-loader-reversed {
+    animation: intro-slide-in-reversed 0.6s cubic-bezier(0.5, 0, 0, 1) both;
+}
+
 .slide-in-blurred-left {
     animation: slide-in-blurred-left 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
     animation-delay: 100ms;
@@ -70,6 +97,10 @@ body, .container {
 
 .slide-in-bottom {
     animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-in-top {
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both reverse;
 }
 
 .title-animation {
@@ -124,5 +155,14 @@ body, .container {
     }
     100% {
         height: 100vh;
+    }
+}
+
+@keyframes intro-slide-in-reversed {
+    0% {
+        height: 100vh;
+    }
+    100% {
+        height: 0vh;
     }
 }
