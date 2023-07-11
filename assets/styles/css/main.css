@@ -68,6 +68,11 @@ body, .container {
     @apply text-[#16181c]
 }
 
+/* Inputs */
+button, input, input:focus, input:focus-visible {
+    outline: none;
+}
+
 /* Selections */
 .dark .text-primary::selection {
     @apply bg-[#e5e7eb];

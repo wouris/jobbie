@@ -38,6 +38,7 @@
     "@nuxtjs/color-mode": "^3.3.0",
     "@pinia/nuxt": "^0.4.11",
     "nuxt-icon": "^0.4.1",
+    "nuxt3-autocomplete": "^0.1.13",
     "pinia": "^2.1.4"
   }
 }

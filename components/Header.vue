@@ -14,8 +14,8 @@ const Store = useHeaderStore()
       <button id="search"
               class="flex justify-between items-center rounded-full w-1/2 px-5 py-2 bg-white/30 text-gray-400">
         <div class="flex items-center">
-          <!--                    <Icon class="text-3xl" name="line-md:search"/>-->
           <p class="text-xl">Search</p>
+          <Icon class="text-2xl" name="material-symbols:arrow-drop-down"/>
         </div>
         <div>
           <KeyboardKey :key-value="'SHIFT'"/>
@@ -26,11 +26,30 @@ const Store = useHeaderStore()
     </div>
     <div v-if="showSearch" id="search-overlay"
          class="grid place-items-center background-inversed-transparent overflow-hidden fixed left-0 top-0 w-full backdrop-blur intro-loader"
-         @click="closeOverlay">
-      <div class="flex gap-2 items-center rounded-xl container py-3 px-5 w-1/3">
-        <Icon class="text-4xl rotate-90 text-gray-400" name="material-symbols:search"/>
-        <input class="text-4xl bg-transparent text-gray-400"
-               placeholder="Search..." type="text">
+    >
+      <div class="relative w-1/2 h-1/2 grid place-items-center">
+        <div class="flex gap-2 items-center w-1/2">
+          <div class="flex gap-2 container rounded-xl py-3 px-5">
+            <Icon class="text-4xl text-gray-400" name="material-symbols:search"/>
+            <input id="autoComplete" v-model="keyword" class="text-2xl bg-transparent text-gray-400 w-full"
+                   placeholder="Search..."
+                   type="text" @input="filterResults"
+            >
+          </div>
+          <div>
+            <button class="flex flex-col items-center container w-fit rounded-md p-2"
+                    @click="closeOverlay">
+              <Icon class="text-4xl" name="material-symbols:close-rounded"/>
+            </button>
+          </div>
+        </div>
+        <ul>
+          <li v-for="item in filtered" :key="item.id">
+            <NuxtLink to="/">
+              {{ item }}
+            </NuxtLink>
+          </li>
+        </ul>
       </div>
     </div>
     <div id="right-items" class="flex items-center overflow-hidden">
@@ -47,10 +66,18 @@ import {useHeaderStore} from "~/store/headerStore";
 
 const Store = useHeaderStore()
 
+const items = [
+  'java developer',
+  'c# developer'
+]
+
 export default {
   data() {
     return {
-      'showSearch': false,
+      filtered: [],
+      keyword: "",
+      hasInput: false,
+      showSearch: false,
     }
   },
   mounted() {
@@ -82,12 +109,17 @@ export default {
 
       document.addEventListener('keydown', (event) => {
         keysPressed[event.key] = true;
-
         if (keysPressed['Shift'] && event.key === 'K') {
           if (this.showSearch) {
             this.closeOverlay()
           } else {
             this.openOverlay()
+          }
+        }
+
+        if (event.key === 'Escape') {
+          if (this.showSearch) {
+            this.closeOverlay()
           }
         }
       });
@@ -112,7 +144,20 @@ export default {
         this.showSearch = false
       }, 610)
     }
-  }
+  },
+  computed: {
+    filterResults() {
+      let tempItems = items;
+      if (this.keyword != "" && this.keyword) {
+        tempItems = tempItems.filter((item) => {
+          return item.toLowerCase().includes(this.keyword.toLowerCase());
+        });
+        this.filtered = tempItems;
+      } else {
+        this.filtered = []
+      }
+    },
+  },
 }
 </script>
 

@@ -5959,6 +5959,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"autocompleter@npm:^7.0.1":
+  version: 7.1.0
+  resolution: "autocompleter@npm:7.1.0"
+  checksum: 499a70a2245b6611aabfc0164051a017ea91de84847e00183683fb482dcf47155d6266d649272d290052d9ee6a2a2c1b7200ccc3e9ec5e3a0f9c5483e5cb5354
+  languageName: node
+  linkType: hard
+
 "autoprefixer@npm:^10.4.14":
   version: 10.4.14
   resolution: "autoprefixer@npm:10.4.14"
@@ -14008,6 +14015,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nuxt3-autocomplete@npm:^0.1.13":
+  version: 0.1.13
+  resolution: "nuxt3-autocomplete@npm:0.1.13"
+  dependencies:
+    autocompleter: ^7.0.1
+  checksum: 6afe46621843554fd0c2a1d0a4f5ce69057065402fa911869065e42e86adca9429027bd7e48912f5bbd07bb87bb63f6ed8c8f11c7f944fa510cc28793d3ea3f3
+  languageName: node
+  linkType: hard
+
 "nuxt@npm:^3.6.0":
   version: 3.6.0
   resolution: "nuxt@npm:3.6.0"
@@ -16632,6 +16648,7 @@ __metadata:
     "@vitest/ui": ^0.32.2
     nuxt: ^3.6.0
     nuxt-icon: ^0.4.1
+    nuxt3-autocomplete: ^0.1.13
     pinia: ^2.1.4
     postcss: ^8.4.24
     sass: ^1.63.6
