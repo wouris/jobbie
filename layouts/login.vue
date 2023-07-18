@@ -1,6 +1,6 @@
 <template>
   <main class="min-h-screen">
-    <Header :search="true"/>
+    <Header :search="false"/>
     <slot/>
   </main>
 </template>

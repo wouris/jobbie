@@ -8,7 +8,7 @@ definePageMeta({
   <div class="grid place-items-center h-screen">
     <div class="flex flex-col gap-2 items-center">
       <h1 id="title" class="text-6xl text-primary title-animation">JObbIE.</h1>
-      <h3 class="text-3xl">Turn your hobby into a job!</h3>
+      <h3 class="text-center text-xl md:text-3xl">Turn your hobby into a job!</h3>
       <a id="explore-btn"
          class="border-green-500 rounded-sm border-2 p-2 py flex items-center overflow-hidden relative cursor-pointer"
          @click="redirect">
@@ -24,6 +24,7 @@ definePageMeta({
 
 <script>
 export default {
+  auth: false,
   data() {
     return {
       "showLoader": false,
